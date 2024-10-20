@@ -8,7 +8,7 @@ export class Name {
 
     constructor(other: string[], delimiter?: string) {
         this.components = other;
-        if (delimiter !== undefined)
+        if (delimiter != undefined)
             this.delimiter = delimiter;
     }
 
@@ -39,5 +39,4 @@ export class Name {
     public remove(i: number): void {
         this.components.splice(i, 1);
     }
-
 }
