@@ -14,6 +14,7 @@ export class Name {
     }
 
     // @methodtype conversion-method (query-method)
+    /** Returns human-readable representation of Name instance */
     public asNameString(delimiter: string = this.delimiter): string {
         return this.components.join(delimiter);
     }
@@ -29,6 +30,7 @@ export class Name {
     }
 
     // @methodtype get-method (query-method)
+    /** Returns number of components in Name instance */
     public getNoComponents(): number {
         return this.components.length;
     }
