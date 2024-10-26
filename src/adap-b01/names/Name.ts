@@ -6,36 +6,44 @@ export class Name {
     private components: string[] = [];
     private delimiter: string = this.DEFAULT_DELIMITER;
 
+    // @methodtype constructor
     constructor(other: string[], delimiter?: string) {
         this.components = other;
         if (delimiter != undefined)
             this.delimiter = delimiter;
     }
 
+    // @methodtype conversion-method (query-method)
     public asNameString(delimiter: string = this.delimiter): string {
         return this.components.join(delimiter);
     }
 
+    // @methodtype get-method (query-method)
     public getComponent(i: number): string {
         return this.components[i];
     }
 
+    // @methodtype set-method (mutation-method)
     public setComponent(i: number, c: string): void {
         this.components[i] = c;
     }
 
+    // @methodtype get-method (query-method)
     public getNoComponents(): number {
         return this.components.length;
     }
 
+    // @methodtype command-method (mutation-method)
     public insert(i: number, c: string): void {
         this.components.splice(i, 0, c);
     }
 
+    // @methodtype command-method (mutation-method)
     public append(c: string): void {
         this.components.push(c);
     }
 
+    // @methodtype command-method (mutation-method)
     public remove(i: number): void {
         this.components.splice(i, 1);
     }
