@@ -13,39 +13,39 @@ export class Name {
             this.delimiter = delimiter;
     }
 
-    // @methodtype conversion-method (query-method)
+    // @methodtype conversion-method
     /** Returns human-readable representation of Name instance */
     public asNameString(delimiter: string = this.delimiter): string {
         return this.components.join(delimiter);
     }
 
-    // @methodtype get-method (query-method)
+    // @methodtype get-method
     public getComponent(i: number): string {
         return this.components[i];
     }
 
-    // @methodtype set-method (mutation-method)
+    // @methodtype set-method
     public setComponent(i: number, c: string): void {
         this.components[i] = c;
     }
 
-    // @methodtype get-method (query-method)
+    // @methodtype get-method
     /** Returns number of components in Name instance */
     public getNoComponents(): number {
         return this.components.length;
     }
 
-    // @methodtype command-method (mutation-method)
+    // @methodtype command-method
     public insert(i: number, c: string): void {
         this.components.splice(i, 0, c);
     }
 
-    // @methodtype command-method (mutation-method)
+    // @methodtype command-method
     public append(c: string): void {
         this.components.push(c);
     }
 
-    // @methodtype command-method (mutation-method)
+    // @methodtype command-method
     public remove(i: number): void {
         this.components.splice(i, 1);
     }
